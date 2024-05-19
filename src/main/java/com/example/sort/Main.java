@@ -16,9 +16,13 @@ public class Main {
         try {
             // Read data from Excel file
             List<Integer> data = new ArrayList<>();
-            FileInputStream fis = new FileInputStream(new File("F:/University/4th Year/Semester 1/Programming III/Assignment/Code/quick_sort/products.xlsx"));
+
+            // Set the Excel file
+            FileInputStream fis = new FileInputStream(new File("products.xlsx"));
             Workbook workbook = new XSSFWorkbook(fis);
-            Sheet sheet = workbook.getSheetAt(0); // Assuming the data is in the first sheet
+            
+            // Assuming the data is in the first sheet
+            Sheet sheet = workbook.getSheetAt(0); 
 
             for (Row row : sheet) {
                 for (Cell cell : row) {
